@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get Started - Hire Me</title>
+  <link rel="shorcut icon" href="icon.png">
+  <style>
+
+       * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6a00;
+  letter-spacing: 1px;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Hover underline animation */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #ff6a00;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6a00;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Mobile Menu Icon */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #ff6a00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    background: white;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+
+    /* Global */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+/* Hero */
+.start-hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: #fff3e6;
+}
+
+.start-hero h1 {
+  font-size: 40px;
+  color: #ff6a00;
+}
+
+.start-hero p {
+  color: #555;
+}
+
+/* Section */
+.start-section {
+  padding: 80px 8%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Form */
+.start-form {
+  width: 100%;
+  max-width: 500px;
+  background: #fff3e6;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s forwards;
+}
+
+.start-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.start-form input,
+.start-form textarea,
+.start-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Phone */
+.phone-group {
+  display: flex;
+  gap: 10px;
+}
+
+.phone-group select {
+  width: 35%;
+}
+
+.phone-group input {
+  width: 65%;
+}
+
+/* Packages */
+.packages {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.packages label {
+  background: #ffe0cc;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.packages input {
+  margin-right: 5px;
+}
+
+.packages label:hover {
+  background: #ff6a00;
+  color: #fff;
+}
+
+/* Button */
+.start-form button {
+  width: 100%;
+  padding: 12px;
+  background: #ff6a00;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.start-form button:hover {
+  background: #e65c00;
+  transform: translateY(-3px);
+}
+
+/* Animation */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .packages {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .phone-group {
+    flex-direction: column;
+  }
+}
+
+
+/* Footer */
+.footer {
+  background: #fff3e6;
+  color: #333;
+  padding-top: 60px;
+  margin-top: 50px;
+}
+
+/* Container */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 0 8%;
+}
+
+/* Boxes */
+.footer-box {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.footer-box h2,
+.footer-box h3 {
+  color: #ff6a00;
+  margin-bottom: 15px;
+}
+
+.footer-box p,
+.footer-box li {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Links */
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 8px;
+}
+
+.footer-box ul li a {
+  text-decoration: none;
+  color: #555;
+  transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+  color: #ff6a00;
+}
+
+/* Social */
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  background: #ff6a00;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #e65c00;
+  transform: translateY(-3px);
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Animation class */
+.footer-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">Ankush Gautam</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <div class="menu-toggle" id="menuToggle">
+    ☰
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="start-hero">
+  <h1>Get Started</h1>
+  <p>Tell us about your project and let’s build something amazing 🚀</p>
+</section>
+
+<!-- Form Section -->
+<section class="start-section">
+
+  <form class="start-form" id="startForm">
+
+    <h2>Project Details</h2>
+
+    <input type="text" id="name" placeholder="Your Name" required>
+
+    <input type="email" id="email" placeholder="Your Email" required>
+
+    <div class="phone-group">
+      <select id="countryCode">
+        <option value="+91">🇮🇳 +91</option>
+        <option value="+1">🇺🇸 +1</option>
+        <option value="+44">🇬🇧 +44</option>
+        <option value="+61">🇦🇺 +61</option>
+        <option value="+81">🇯🇵 +81</option>
+        <option value="+971">🇦🇪 +971</option>
+        <option value="+966">🇸🇦 +966</option>
+        <option value="+49">🇩🇪 +49</option>
+        <option value="+33">🇫🇷 +33</option>
+        <option value="+39">🇮🇹 +39</option>
+      </select>
+
+      <input type="text" id="phone" placeholder="Phone Number" required>
+    </div>
+
+    <!-- Package Selection -->
+    <div class="packages">
+      <label>
+        <input type="radio" name="plan" value="Basic Website ₹2999" checked>
+        Basic
+      </label>
+
+      <label>
+        <input type="radio" name="plan" value="Standard Website ₹5999">
+        Standard
+      </label>
+
+      <label>
+        <input type="radio" name="plan" value="Premium Website ₹9999">
+        Premium
+      </label>
+    </div>
+
+    <textarea id="message" placeholder="Describe your project..." required></textarea>
+
+    <button type="submit">Start Project 🚀</button>
+
+  </form>
+
+</section>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-box">
+      <h2>Ankush Gautam</h2>
+      <p>
+        A modern web developer focused on creating responsive,
+        interactive, and user-friendly websites.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-box">
+      <h3>Contact</h3>
+      <p>📞 +91 9335435541</p>
+      <p>📧 rg936073@gmail.com</p>
+      <p>📍 Kathui, Bidhanu, Kanpur Nagar, U.P. India</p>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-box">
+      <h3>Follow Us</h3>
+      <div class="social-links">
+        <a href="#">🌐</a>
+        <a href="#">🐦</a>
+        <a href="#">📘</a>
+        <a href="#">📸</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Ankush Gautam. All Rights Reserved.</p>
+  </div>
+
+</footer>
+<script>
+
+   const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+  const form = document.getElementById("startForm");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const code = document.getElementById("countryCode").value;
+  const message = document.getElementById("message").value;
+  const plan = document.querySelector('input[name="plan"]:checked').value;
+
+  const fullMessage =
+    `Hello, I want to start a project.%0A` +
+    `Name: ${name}%0A` +
+    `Email: ${email}%0A` +
+    `Phone: ${code} ${phone}%0A` +
+    `Selected Plan: ${plan}%0A` +
+    `Project Details: ${message}`;
+
+  const url = `https://wa.me/919335435541?text=${fullMessage}`;
+
+  window.open(url, "_blank");
+});
+
+const footerBoxes = document.querySelectorAll(".footer-box");
+
+window.addEventListener("scroll", () => {
+  const triggerBottom = window.innerHeight - 100;
+
+  footerBoxes.forEach((box, index) => {
+    const boxTop = box.getBoundingClientRect().top;
+
+    if (boxTop < triggerBottom) {
+      setTimeout(() => {
+        box.classList.add("show");
+      }, index * 150);
+    }
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire Now - Basic Plan</title>
+  <link rel="shorcut icon" href="icon.png">
+  <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6a00;
+  letter-spacing: 1px;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Hover underline animation */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #ff6a00;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6a00;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Mobile Menu Icon */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #ff6a00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    background: white;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+  background: #ffffff;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: #fff3e6;
+}
+
+.hero h1 {
+  font-size: 40px;
+  color: #ff6a00;
+  animation: fadeDown 1s ease;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #555;
+  animation: fadeDown 1.2s ease;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+/* Card */
+.card {
+  background: #fff3e6;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s forwards;
+}
+
+/* Title */
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff6a00;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #ff6a00;
+}
+
+/* Button */
+.btn {
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.primary {
+  background: #ff6a00;
+  color: white;
+}
+
+.primary:hover {
+  background: #e65c00;
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+}
+
+
+
+/* Footer */
+.footer {
+  background: #fff3e6;
+  color: #333;
+  padding-top: 60px;
+  margin-top: 50px;
+}
+
+/* Container */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 0 8%;
+}
+
+/* Boxes */
+.footer-box {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.footer-box h2,
+.footer-box h3 {
+  color: #ff6a00;
+  margin-bottom: 15px;
+}
+
+.footer-box p,
+.footer-box li {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Links */
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 8px;
+}
+
+.footer-box ul li a {
+  text-decoration: none;
+  color: #555;
+  transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+  color: #ff6a00;
+}
+
+/* Social */
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  background: #ff6a00;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #e65c00;
+  transform: translateY(-3px);
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Animation class */
+.footer-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">Ankush Gautam</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <div class="menu-toggle" id="menuToggle">
+    ☰
+  </div>
+</nav>
+
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Hire Basic Plan</h1>
+  <p>Start your project with our affordable ₹2,999 plan 🚀</p>
+</section>
+
+<!-- Hire Form -->
+<section class="container">
+
+  <div class="card">
+
+    <h2>Basic Plan - ₹2,999</h2>
+
+    <form id="hireForm">
+      
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="text" id="phone" placeholder="Your Phone Number" required>
+
+      <textarea id="message" placeholder="Describe your project..." required></textarea>
+
+      <button type="submit" class="btn primary">Send via WhatsApp</button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-box">
+      <h2>Ankush Gautam</h2>
+      <p>
+        A modern web developer focused on creating responsive,
+        interactive, and user-friendly websites.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>s
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-box">
+      <h3>Contact</h3>
+      <p>📞 +91 9335435541</p>
+      <p>📧 rg936073@gmail.com</p>
+      <p>📍 Kathui, Bidhanu, Kanpur Nagar, U.P. India</p>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-box">
+      <h3>Follow Us</h3>
+      <div class="social-links">
+        <a href="#">🌐</a>
+        <a href="#">🐦</a>
+        <a href="#">📘</a>
+        <a href="#">📸</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Ankush Gautam. All Rights Reserved.</p>
+  </div>
+
+</footer>
+<script>
+   const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+
+  document.getElementById("hireForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
+  let message = document.getElementById("message").value;
+
+  // WhatsApp number (India +91)
+  let whatsappNumber = "919335435541";
+
+  let text = `Hello, I want to hire Basic Plan.%0A
+Name: ${name}%0A
+Email: ${email}%0A
+Phone: ${phone}%0A
+Message: ${message}`;
+
+  let url = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+  window.open(url, "_blank");
+});
+
+  const footerBoxes = document.querySelectorAll(".footer-box");
+
+window.addEventListener("scroll", () => {
+  const triggerBottom = window.innerHeight - 100;
+
+  footerBoxes.forEach((box, index) => {
+    const boxTop = box.getBoundingClientRect().top;
+
+    if (boxTop < triggerBottom) {
+      setTimeout(() => {
+        box.classList.add("show");
+      }, index * 150);
+    }
+  });
+});
+</script>
+</body>
+</html>
